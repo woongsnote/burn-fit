@@ -1,10 +1,10 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import Home from '../screens/Home';
-import Calendar from '../screens/Calendar';
-import Library from '../screens/Library';
-import MyPage from '../screens/MyPage';
+import HomeScreen from '../screens/HomeScreen';
+import CalendarScreen from '../screens/CalendarScreen';
+import LibraryScreen from '../screens/LibraryScreen';
+import MyPageScreen from '../screens/MyPageScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,35 +18,35 @@ const BottomTabs = () => {
       }}>
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={HomeScreen}
         options={{
           tabBarLabel: 'HOME',
           tabBarIcon: ({focused}) => (
             <MaterialCommunityIcon
-              name="home"
+              name={focused ? 'home' : 'home-outline'}
               color={focused ? 'black' : 'gray'}
-              size={24}
+              size={28}
             />
           ),
         }}
       />
       <Tab.Screen
         name="Calendar"
-        component={Calendar}
+        component={CalendarScreen}
         options={{
           tabBarLabel: 'CALENDAR',
           tabBarIcon: ({focused}) => (
             <MaterialCommunityIcon
-              name="calendar-month-outline"
+              name={focused ? 'calendar-month' : 'calendar-month-outline'}
               color={focused ? 'black' : 'gray'}
-              size={24}
+              size={28}
             />
           ),
         }}
       />
       <Tab.Screen
         name="Library"
-        component={Library}
+        component={LibraryScreen}
         options={{
           tabBarLabel: 'LIBRARY',
           tabBarIcon: ({focused}) => (
@@ -60,14 +60,14 @@ const BottomTabs = () => {
       />
       <Tab.Screen
         name="MyPage"
-        component={MyPage}
+        component={MyPageScreen}
         options={{
           tabBarLabel: 'MY PAGE',
           tabBarIcon: ({focused}) => (
             <MaterialCommunityIcon
-              name="account-outline"
+              name={focused ? 'account' : 'account-outline'}
               color={focused ? 'black' : 'gray'}
-              size={24}
+              size={28}
             />
           ),
         }}

@@ -1,6 +1,6 @@
 import {View, StyleSheet, Text} from 'react-native';
 
-const Library = () => {
+const LibraryScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Library</Text>
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-export default Library;
+export default LibraryScreen;
